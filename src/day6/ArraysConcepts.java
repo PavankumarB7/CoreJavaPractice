@@ -1,6 +1,8 @@
 package day6;
 
-public class Arrays {
+import java.util.Arrays;
+
+public class ArraysConcepts {
 
     public static void main(String[] args) {
 
@@ -112,6 +114,42 @@ public class Arrays {
 
         for (Object value : data) {
             System.out.println(value);
+        }
+
+        // =====================================================
+        // SORTING ARRAYS USING ARRAYS.SORT()
+        // =====================================================
+
+        int[] num = { 100, 600, 400, 200, 300, 500 };
+
+        System.out.println("Before Sorting...........");
+        System.out.println(Arrays.toString(num));
+
+        Arrays.sort(num);
+
+        System.out.println("After Sorting.........");
+        System.out.println(Arrays.toString(num));
+
+        // =====================================================
+        // SORTING STRING ARRAYS
+        // =====================================================
+
+        String[] s = { "scott", "mary", "john", "david" };
+
+        System.out.println("Before Sorting ..... " + Arrays.toString(s));
+
+        Arrays.sort(s);
+
+        System.out.println("After Sorting ..... " + Arrays.toString(s));
+
+        // =====================================================
+        // TRAVERSE ARRAY IN REVERSE ORDER
+        // =====================================================
+
+        int[] arr2 = { 100, 500, 400, 600, 200 };
+
+        for (int i = arr2.length - 1; i >= 0; i--) {
+            System.out.println(arr2[i]);
         }
     }
 }
