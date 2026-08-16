@@ -171,3 +171,62 @@ A constructor is a special class member used to initialize data when an object i
 **Constructor → Initialize the object**
 
 **Method → Perform an action / implement logic**
+
+### Polymorphism and Encapsulation
+
+## Polymorphism
+
+**Polymorphism = one thing having many forms.**
+
+Examples:
+
+```text
+Shape → Circle, Square, Rectangle, Triangle
+Water → Vapour, Ice, Liquid
+```
+
+Polymorphism can be achieved using overloading.
+
+### Overloading
+
+Overloading means having multiple methods or constructors with the **same name but different parameters**.
+
+### Rules for Overloading
+
+1. Method/constructor names should be the same.
+2. Number of parameters can be different.
+3. Data types of parameters can be different.
+4. Order of parameters can be different.
+5. Return type is not considered for overloading.
+
+## Encapsulation
+
+Encapsulation = wrapping data (variables) and methods into a single unit (class) to ensure data security.
+
+## Implementation
+
+1. Variables should be private.
+2. For every variable, provide set and get methods.
+3. Variables can be operated/accessed through methods.
+
+## Getters and Setters
+
+When variables are private, they cannot be directly accessed through the object.
+
+setMethod() → sets/assigns a value to a variable.
+getMethod() → gets/reads a value from a variable.
+
+## this Keyword
+
+When the class variable and method parameter have the same name, this is used to differentiate them.
+
+```java
+private int accno;
+
+void setAccno(int accno) {
+    this.accno = accno;
+}
+```
+
+this.accno → class/instance variable
+accno → method parameter (also a local variable)
