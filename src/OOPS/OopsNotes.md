@@ -216,17 +216,108 @@ When variables are private, they cannot be directly accessed through the object.
 setMethod() → sets/assigns a value to a variable.
 getMethod() → gets/reads a value from a variable.
 
-## this Keyword
+## `this` Keyword
 
-When the class variable and method parameter have the same name, this is used to differentiate them.
+`this` refers to the **current object**.
+
+When the instance variable and method/constructor parameter have the same name, `this` is used to differentiate them.
 
 ```java
-private int accno;
-
-void setAccno(int accno) {
-    this.accno = accno;
+void setData(int x, int y) {
+    this.x = x;
+    this.y = y;
 }
 ```
 
-this.accno → class/instance variable
-accno → method parameter (also a local variable)
+- `this.x` → instance variable of the current object
+- `x` → method parameter (local variable)
+
+---
+
+## Types of Variables
+
+### Instance Variables
+
+Declared inside the class but outside methods/constructors.
+
+- Each object gets its own copy.
+
+### Static Variables
+
+Declared inside the class with the `static` keyword.
+
+- One shared copy belongs to the class.
+- Can be accessed without creating an object.
+
+### Local Variables
+
+Declared inside a method, constructor, or block.
+
+- Accessible only within their scope.
+- Method parameters are also local variables.
+
+---
+
+## Static Keyword
+
+### Static
+
+- Belongs to the class.
+- One shared copy.
+- Object is not required to access static members.
+
+### Non-Static (Instance)
+
+- Belongs to an object.
+- Each object has its own copy.
+- Object is required to access non-static members.
+
+### Rules for Static
+
+1. Static methods can access static stuff directly.
+2. Static methods can access non-static stuff through an object.
+3. Non-static methods can access static and non-static stuff directly.
+
+### `System.out.println()`
+
+```java
+System.out.println("Hello");
+```
+
+```text
+System → static out → PrintStream object → println()
+```
+
+- `out` → static variable of `System`
+- `println()` → method of `PrintStream`
+
+---
+
+## Main Method
+
+The `main()` method is the entry point of a Java application.
+
+### Standard Form
+
+```java
+public static void main(String[] args) {
+}
+```
+
+- `public` → accessible to the JVM
+- `static` → can be called without creating an object
+- `void` → returns nothing
+- `main` → method JVM looks for
+- `String[]` → parameter type expected by the JVM
+
+### Important
+
+`public` and `static` can be swapped:
+
+```java
+static public void main(String[] args)
+```
+
+`main(int[] a)` is valid Java syntax but is **not** recognized as the JVM entry point because the JVM expects `String[]`.
+
+> Valid Java syntax does not always mean JVM-recognized entry point.
