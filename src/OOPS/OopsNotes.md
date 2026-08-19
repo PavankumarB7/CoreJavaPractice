@@ -321,3 +321,40 @@ static public void main(String[] args)
 `main(int[] a)` is valid Java syntax but is **not** recognized as the JVM entry point because the JVM expects `String[]`.
 
 > Valid Java syntax does not always mean JVM-recognized entry point.
+
+## Inheritance
+
+Inheritance is an OOP mechanism where a child class acquires accessible properties (variables) and behaviors (methods) from a parent class.
+
+### Benefits
+
+1. Code reusability
+2. Avoids code duplication
+3. Improves maintainability
+
+### Types of Inheritance
+
+1. Single
+   - One parent → one child
+   - A → B
+
+2. Multilevel
+   - Inheritance in a chain
+   - A → B → C
+   - C inherits from B, and B inherits from A
+
+3. Hierarchical
+   - One parent → multiple children
+   - A → B
+   - A → C
+
+4. Multiple
+   - Multiple parents → one child
+   - Not supported through Java classes
+   - Can be achieved through interfaces
+
+### Multiple Inheritance in Java
+
+Java does not support multiple inheritance through classes. A class can extend only one class. One major reason is to avoid ambiguity when multiple parent classes provide the same method.
+
+Java supports multiple inheritance of type through interfaces.
